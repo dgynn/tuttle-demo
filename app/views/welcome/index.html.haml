@@ -1,4 +1,15 @@
 %h2 Welcome
 
-- if user_signed_in?
-  You are signed in as #{current_user.email}
+.panel
+  - if user_signed_in?
+    You are signed in as #{current_user.email}
+  - else
+    You are not signed in
+
+- newuser = User.new
+#permissions.panel
+  %p You #{ can?(:update, newuser) ? 'can':'can not' } update a user
+  %p You #{ can?(:action_a, newuser) ? 'can':'can not' } action_a a user
+  %p You #{ can?(:action_b, newuser) ? 'can':'can not' } action_b a user
+  %p You #{ can?(:action_c, newuser) ? 'can':'can not' } action_c a user
+  %p You #{ can?(:action_d, newuser) ? 'can':'can not' } action_d a user
