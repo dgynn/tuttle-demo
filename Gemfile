@@ -40,4 +40,7 @@ gem 'spring',        group: :development
 gem 'byebug', group: [:development, :test]
 gem 'tuttle', :path => '../tuttle'
 
+gem 'haml'
+gem 'cancancan'
+gem 'devise'
 
