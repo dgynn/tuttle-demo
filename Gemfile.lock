@@ -1,5 +1,7 @@
-PATH
-  remote: ../tuttle
+GIT
+  remote: git://github.com/dgynn/tuttle.git
+  revision: ac1a5a5c0a2dc8f6f6c2fd7fa2af385c752547e1
+  branch: develop
   specs:
     tuttle (0.0.1)
       rails (>= 3.2.18)

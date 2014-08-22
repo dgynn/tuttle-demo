@@ -38,7 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 #gem 'debugger', group: [:development, :test]
 gem 'byebug', group: [:development, :test]
-gem 'tuttle', :path => '../tuttle'
+gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 
 gem 'haml'
 gem 'cancancan'
