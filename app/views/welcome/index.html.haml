@@ -38,3 +38,10 @@
         %p You #{ can?(:action_b, User) ? 'can':'can not' } action_b a user
         %p You #{ can?(:action_c, User) ? 'can':'can not' } action_c a user
         %p You #{ can?(:action_d, User) ? 'can':'can not' } action_d a user
+
+    #helpers.panel.panel-default
+      .panel-heading
+        %h3.panel-title Helper Output
+      .panel-body
+        %p= application_helper_example
+        %p= welcome_helper_example
