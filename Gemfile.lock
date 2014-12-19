@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: 32a5959b4eaea42c13ad4f89e44122edb7ecf56f
+  revision: 5d13be544bd6836fa3e490222ecb2361f331f2be
   branch: develop
   specs:
     tuttle (0.0.1)
@@ -59,6 +59,11 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
     erubis (2.7.0)
     execjs (2.2.2)
     haml (4.0.6)
@@ -143,6 +148,7 @@ DEPENDENCIES
   cancancan
   coffee-rails (~> 4.0.0)
   devise
+  eco
   haml
   jbuilder (~> 2.0)
   jquery-rails

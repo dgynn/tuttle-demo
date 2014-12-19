@@ -40,6 +40,9 @@ gem 'spring',        group: :development
 gem 'byebug', group: [:development, :test]
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 
+gem 'eco'
+# gem 'ejs'
+
 gem 'haml'
 gem 'cancancan'
 gem 'devise'
