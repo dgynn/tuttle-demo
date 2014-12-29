@@ -47,3 +47,5 @@ gem 'haml'
 gem 'cancancan'
 gem 'devise'
 
+gem 'appraisal'
+
