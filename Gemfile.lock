@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: 486e1a5f8a5c00c9a828f18b34b00c0e6f77595b
+  revision: 09a10e5676455aa6e55c719c8a573c2ee32757df
   branch: develop
   specs:
     tuttle (0.0.1)
