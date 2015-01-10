@@ -7,8 +7,6 @@ Rails.application.routes.draw do
     get "/logout", :to => "devise/sessions#destroy"
   end
 
-  mount Tuttle::Engine, at: "tuttle"
-
   get '/secure_page' => 'welcome#secure_page'
 
   # Sample routes
