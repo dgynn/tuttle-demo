@@ -3,7 +3,7 @@
     %h1 Welcome
 
     %p This is the Tuttle Demo application which demonstrates the capabilities of Tuttle.
-    %p This application is a Rails 4.1 minimal application with Devise and CanCan gems installed.
+    %p This application is a Rails 4.1+ minimal application with Devise and CanCan gems installed.
 
     %p= link_to 'Tuttle Dashboard »', tuttle.root_path, :class=>['btn','btn-primary','btn-lg'], :role=>'button'
 
@@ -11,7 +11,7 @@
   .col-md-4
     .h2 Rails
     %p
-      This basic Rails application consists of a few controllers and a few models hitting a SQLite database.
+      This basic Rails application consists of a few controllers and a few models hitting a PostgreSQL database.
     %p
       Tuttle can help inspect Rails applications with knowledge of configuration best practices.
     %p= link_to 'Tuttle Rails', tuttle.rails_path, :class=>['btn','btn-primary'], :role=>'button'
