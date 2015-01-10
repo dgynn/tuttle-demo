@@ -10,8 +10,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails'
 
-gem 'spring',        group: :development
-
 gem 'byebug', group: [:development, :test]
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 
@@ -26,3 +24,4 @@ gem 'appraisal'
 
 gem 'rails_12factor'
 gem 'newrelic_rpm'
+
