@@ -27,3 +27,5 @@ gem 'newrelic_rpm'
 
 gem 'dalli'
 gem 'connection_pool'
+gem 'memcachier'
+
