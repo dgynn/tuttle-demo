@@ -1,3 +1,5 @@
+require 'active_support/core_ext/numeric/bytes'
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -11,7 +13,15 @@ Rails.application.configure do
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
+
+  # To test memcache locally, set an env var for DEV_MEMCACHE and run memcached
+  # You can run 'memcached -vv' to see gets/sets/connections
+  if ENV['DEV_MEMCACHE']
+    config.cache_store = :dalli_store, nil, { :compress => true, :pool_size => 15 }
+  else
+    config.cache_store = :memory_store, { size: 64.megabytes }
+  end
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -34,4 +44,5 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
 end

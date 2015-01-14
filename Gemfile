@@ -25,3 +25,5 @@ gem 'appraisal'
 gem 'rails_12factor'
 gem 'newrelic_rpm'
 
+gem 'dalli'
+gem 'connection_pool'
