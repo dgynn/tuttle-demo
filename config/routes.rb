@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/secure_page' => 'welcome#secure_page'
 
+  get '/cache' => 'cache#index'
+
   # Sample routes
   # Plural resource
   resources :photos

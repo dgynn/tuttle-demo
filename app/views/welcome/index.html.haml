@@ -16,6 +16,13 @@
       Tuttle can help inspect Rails applications with knowledge of configuration best practices.
     %p= link_to 'Tuttle Rails', tuttle.rails_path, :class=>['btn','btn-primary'], :role=>'button'
 
+    .h3 Caching
+    %p
+      Tuttle adds instrumentation to ActiveSupport's caching for better tracking of cache interactions.
+    %p
+      = link_to 'Cache Demo', cache_path, :class=>['btn','btn-primary'], :role=>'button'
+      = link_to 'Tuttle Cache Inspector', tuttle.rails_cache_path, :class=>['btn','btn-primary'], :role=>'button'
+
   .col-md-4
     %h2 Gems
     %p
@@ -46,26 +53,3 @@
         %p= application_helper_example
         %p= welcome_helper_example
 
-    #caching.panel.panel-default
-      .panel-heading
-        %h3.panel-title Cached Output
-      .panel-body
-        - cache('test') do
-          %p Test
-        - cache(['test','array']) do
-          %p Test with array of keys
-        - cache_if(!!params[:test], params[:test]) do
-          %p Test with test_if(#{!!params[:test]}, #{params[:test]})
-        - cache('test_without_digest', skip_digest: true) do
-          %p Test without digest
-        - cache('test_with_expires', expires_in: 1.minute) do
-          %p Test with 1 minute expiration at #{Time.now}
-        - cache(['test','array']) do
-          %p Test with array of keys
-        - cache('test_with_force', force: true) do
-          %p Test with :force => true
-        - cache('test_with_compress', compress: true) do
-          %p Test with :compress => true
-        - cache('test_with_raw', raw: true) do
-          %p Test with :raw => true
-        - # no example of :race_condition_ttl option
