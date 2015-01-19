@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails'
 
-gem 'byebug', group: [:development, :test]
+gem 'byebug', :group => [:development, :test]
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 
 gem 'eco'
@@ -22,7 +22,7 @@ gem 'devise'
 
 gem 'appraisal'
 
-gem 'rails_12factor'
+gem 'rails_12factor', :group => :production
 gem 'newrelic_rpm'
 
 gem 'dalli'
