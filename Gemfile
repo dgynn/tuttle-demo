@@ -10,6 +10,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
+# Server
+gem 'thin'
+
 # Rendering options
 gem 'eco'
 # gem 'ejs'
@@ -39,6 +42,10 @@ gem 'fast_blank'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'quiet_assets'
 end
 
 gem 'byebug', :group => [:development, :test]
