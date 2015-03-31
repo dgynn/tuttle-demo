@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: 6ac5318c9aef264cbf967739ecf15937464a7174
+  revision: 1921bd0eb875f37bcb0071ac2103bd8f70d4c870
   branch: develop
   specs:
-    tuttle (0.0.2)
+    tuttle (0.0.3)
       rails (>= 4.1.4, < 5.0.0)
 
 GEM
@@ -57,7 +57,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (4.0.3)
+    byebug (4.0.4)
       columnize (= 0.9.0)
     cancancan (1.10.1)
     coderay (1.1.0)
@@ -128,7 +128,7 @@ GEM
     pry-byebug (3.1.0)
       byebug (~> 4.0)
       pry (~> 0.10)
-    pry-rails (0.3.3)
+    pry-rails (0.3.4)
       pry (>= 0.9.10)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
