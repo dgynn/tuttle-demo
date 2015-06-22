@@ -1,4 +1,4 @@
-== Tuttle Demo
+# Tuttle Demo
 
 This is the source code for the demo application of [Tuttle](github.com/dgynn/tuttle) which is a tool for helping Rails developers inspect what is going on in their applictions. 
 
