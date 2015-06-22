@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: fe771e4822a05a6ad72d42a2c1c685f4dfba0f9b
+  revision: 70ca8228cba21f884830cf2391f2549ba14473eb
   branch: develop
   specs:
     tuttle (0.0.3)
@@ -8,14 +8,14 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: 7442623100f5ecdd73fd8f68376431762380f4e5
+  revision: 2d19f7a9656336849e2241ff8731e52806eec27b
   branch: master
   specs:
     arel (7.0.0.alpha)
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: db620812354c39b928d4ac6a8fc05437c54031cc
+  revision: 9dbe3f9aa8325915907e313608504351a1ba19bb
   branch: master
   specs:
     actionmailer (5.0.0.alpha)
@@ -89,7 +89,7 @@ GEM
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
-    cancancan (1.10.1)
+    cancancan (1.11.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -133,7 +133,7 @@ GEM
       domain_name (~> 0.5)
     httpclient (2.6.0.1)
     i18n (0.7.0)
-    jquery-rails (4.0.3)
+    jquery-rails (4.0.4)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -171,7 +171,7 @@ GEM
       pry (>= 0.9.10)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
-    rack (1.6.1)
+    rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
