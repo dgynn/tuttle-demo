@@ -22,6 +22,7 @@ gem 'haml'
 # Utility libraries
 gem 'cancancan'
 gem 'devise'
+gem 'paperclip'
 
 # Caching
 gem 'dalli'
