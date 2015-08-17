@@ -21,7 +21,7 @@ gem 'haml'
 
 # Utility libraries
 gem 'cancancan'
-gem 'devise'
+gem 'devise', :github => 'dgynn/devise', :branch => 'rails5'
 gem 'paperclip'
 
 # Caching

@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/dgynn/devise.git
+  revision: a18ca34a88994d206d563b976bb1d188aff9935f
+  branch: rails5
+  specs:
+    devise (3.5.2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+
+GIT
   remote: git://github.com/dgynn/tuttle.git
   revision: c5962b1b72779c1f3daebc5edae54401bf7e1d2d
   branch: develop
@@ -15,7 +28,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 15fd2586a89f27031adc5fca8e03149b3c494fdb
+  revision: 54042c45e3ebee570354e969fb0bbd4ce3cf09df
   branch: master
   specs:
     actionmailer (5.0.0.alpha)
@@ -109,13 +122,6 @@ GEM
     daemons (1.2.3)
     dalli (2.7.4)
     debug_inspector (0.0.2)
-    devise (3.5.2)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      responders
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     eco (1.0.0)
@@ -242,7 +248,7 @@ DEPENDENCIES
   coffee-rails
   connection_pool
   dalli
-  devise
+  devise!
   eco
   fast_blank
   haml
