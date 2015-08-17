@@ -1,21 +1,21 @@
 GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: 70ca8228cba21f884830cf2391f2549ba14473eb
+  revision: c5962b1b72779c1f3daebc5edae54401bf7e1d2d
   branch: develop
   specs:
-    tuttle (0.0.3)
-      rails (>= 4.1.4, < 5.1)
+    tuttle (0.0.4)
+      rails (>= 4.0.0, < 5.1)
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: 2d19f7a9656336849e2241ff8731e52806eec27b
+  revision: d5432b4616ff43fbb14540d351eed351e21bb20e
   branch: master
   specs:
     arel (7.0.0.alpha)
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 9dbe3f9aa8325915907e313608504351a1ba19bb
+  revision: 15fd2586a89f27031adc5fca8e03149b3c494fdb
   branch: master
   specs:
     actionmailer (5.0.0.alpha)
@@ -48,8 +48,10 @@ GIT
       activesupport (= 5.0.0.alpha)
       arel (= 7.0.0.alpha)
     activesupport (5.0.0.alpha)
+      concurrent-ruby (~> 0.9.0)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
+      method_source
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
@@ -74,8 +76,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.0.1)
-      activesupport (>= 3.2.21)
+    appraisal (2.1.0)
       bundler
       rake
       thor (>= 0.14.0)
@@ -87,9 +88,9 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (4.0.5)
+    byebug (5.0.0)
       columnize (= 0.9.0)
-    cancancan (1.11.0)
+    cancancan (1.12.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -103,11 +104,12 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
+    concurrent-ruby (0.9.1)
     connection_pool (2.2.0)
-    daemons (1.2.2)
+    daemons (1.2.3)
     dalli (2.7.4)
     debug_inspector (0.0.2)
-    devise (3.5.1)
+    devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -122,12 +124,12 @@ GEM
       execjs
     eco-source (1.1.0.rc.1)
     erubis (2.7.0)
-    eventmachine (1.0.7)
-    execjs (2.5.2)
-    fast_blank (0.0.2)
-    globalid (0.3.5)
+    eventmachine (1.0.8)
+    execjs (2.6.0)
+    fast_blank (1.0.0)
+    globalid (0.3.6)
       activesupport (>= 4.1.0)
-    haml (4.0.6)
+    haml (4.0.7)
       tilt
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -138,7 +140,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    loofah (2.0.2)
+    loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
@@ -147,8 +149,8 @@ GEM
     mime-types (2.6.1)
     mimemagic (0.3.0)
     mini_portile (0.6.2)
-    minitest (5.7.0)
-    multi_json (1.11.1)
+    minitest (5.8.0)
+    multi_json (1.11.2)
     netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -164,8 +166,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.1.0)
-      byebug (~> 4.0)
+    pry-byebug (3.2.0)
+      byebug (~> 5.0)
       pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
@@ -176,7 +178,7 @@ GEM
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.6)
+    rails-dom-testing (1.0.7)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
@@ -194,7 +196,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.4.14)
+    sass (3.4.16)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -202,9 +204,9 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
     slop (3.6.0)
-    sprockets (3.2.0)
+    sprockets (3.3.1)
       rack (~> 1.0)
-    sprockets-rails (2.3.1)
+    sprockets-rails (2.3.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -262,3 +264,6 @@ DEPENDENCIES
   tuttle!
   uglifier
   yajl-ruby
+
+BUNDLED WITH
+   1.10.6
