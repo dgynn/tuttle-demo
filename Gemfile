@@ -1,12 +1,16 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.2.3'
 
 gem 'rails', :github => 'rails/rails', :branch => 'master'
+gem 'sprockets-rails', :github => 'rails/sprockets-rails', :branch => 'master'
+gem 'sprockets', :github => 'rails/sprockets', :branch => 'master'
+gem 'sass-rails', :github => 'rails/sass-rails', :branch => 'master'
 gem 'arel', :github => 'rails/arel', :branch => 'master'
+gem 'rack', :github => 'rack/rack', :branch => 'master'
+
 gem 'pg'
 
-gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
