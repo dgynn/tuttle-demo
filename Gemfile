@@ -57,6 +57,7 @@ end
 gem 'byebug', :group => [:development, :test]
 
 gem 'rails_12factor', :group => :production
+gem 'rails_serve_static_assets', :github => 'heroku/rails_serve_static_assets', :group => :production # pending release of 0.0.5
 
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 
