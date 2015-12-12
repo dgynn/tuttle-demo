@@ -56,10 +56,6 @@ end
 
 gem 'byebug', :group => [:development, :test]
 
-group :test do
-  gem 'appraisal'
-end
-
 gem 'rails_12factor', :group => :production
 
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'

@@ -126,10 +126,6 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    appraisal (2.1.0)
-      bundler
-      rake
-      thor (>= 0.14.0)
     bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -261,7 +257,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  appraisal
   arel!
   better_errors
   binding_of_caller
