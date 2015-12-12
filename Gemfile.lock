@@ -111,6 +111,13 @@ GIT
       rack (> 1, < 3)
 
 GIT
+  remote: git://github.com/rossbeale/quiet_assets.git
+  revision: c9df6e81e0b073704b367031d694c76c75c3e2d5
+  specs:
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
+
+GIT
   remote: git://github.com/twalpole/devise.git
   revision: 2024fca4dfa3323070c3477e262b8422cadf6a42
   branch: rails5
@@ -208,8 +215,6 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
-    quiet_assets (1.1.0)
-      railties (>= 3.1, < 5.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
@@ -278,7 +283,7 @@ DEPENDENCIES
   pry
   pry-byebug
   pry-rails
-  quiet_assets
+  quiet_assets!
   rack!
   rails!
   rails_12factor

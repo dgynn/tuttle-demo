@@ -51,7 +51,7 @@ group :development do
   gem 'pry'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'quiet_assets'
+  gem 'quiet_assets', :github => 'rossbeale/quiet_assets' # pending PR quiet_assets#43
 end
 
 gem 'byebug', :group => [:development, :test]
