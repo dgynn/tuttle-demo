@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: 6014151489ccd85098a79fb42dc49b70a69e2efa
+  revision: f6a911f678a4d8ef622e587ea5959ff4949a7d25
   branch: develop
   specs:
     tuttle (0.0.4)
@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: eb0e8e216fcf535a1e6b82720dfb7639fcc20ff2
+  revision: 2de7385cef62ad12cef5bcfe1de18c4662072344
   branch: master
   specs:
     actionmailer (5.0.0.alpha)
