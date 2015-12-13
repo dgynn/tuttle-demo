@@ -45,9 +45,4 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
-  if defined?(Tuttle)
-    config.tuttle.enabled = true
-    config.tuttle.automount_engine = true
-  end
-
 end
