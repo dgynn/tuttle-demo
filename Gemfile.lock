@@ -1,6 +1,16 @@
 GIT
+  remote: git://github.com/dgynn/active_model_serializers.git
+  revision: 905546220d49bb5e6a759546ee13f652ebf896eb
+  branch: pr_bf4railties_initializer_order
+  specs:
+    active_model_serializers (0.10.0.rc3)
+      actionpack (>= 4.0)
+      activemodel (>= 4.0)
+      railties (>= 4.0)
+
+GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: d5a1d5e1128bbd4225bdface1712ab62bf9eec8b
+  revision: ea09cc572b4f5c538a29a75db310d56d1e1c3f1b
   branch: develop
   specs:
     tuttle (0.0.4)
@@ -14,7 +24,7 @@ GIT
 
 GIT
   remote: git://github.com/rack/rack.git
-  revision: 2ac599551d6147184321c42f40a0ab3241499b08
+  revision: 545532b01d332325c913808b7c2047a9256ed551
   branch: master
   specs:
     rack (2.0.0.alpha)
@@ -22,14 +32,14 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: ea2d50706a5f8215ff2346fa562423700b2d2b6e
+  revision: 63ea665c8083f8069a0d05d4f15cf19e08e470a6
   branch: master
   specs:
     arel (7.0.0)
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: c56e56773815221ef1fbd127f949c3e5207ea471
+  revision: 24ad8c058cae81874569da679df4d074694578c2
   branch: master
   specs:
     actioncable (5.0.0.beta1)
@@ -64,7 +74,6 @@ GIT
       globalid (>= 0.3.6)
     activemodel (5.0.0.beta1)
       activesupport (= 5.0.0.beta1)
-      builder (~> 3.1)
     activerecord (5.0.0.beta1)
       activemodel (= 5.0.0.beta1)
       activesupport (= 5.0.0.beta1)
@@ -97,7 +106,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: 6e4eee736bcbfa5b2962467673c7a51abf434c67
+  revision: a11d4c7989a2b3e82b780e4c363c7e5d28c4b739
   branch: master
   specs:
     sass-rails (6.0.0)
@@ -108,7 +117,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets-rails.git
-  revision: 419958f24fb4ce2d4c86f68f87c5a76767f3aa88
+  revision: 9ef1ac55b5c22a77bec2552f175bd02f574084a0
   branch: master
   specs:
     sprockets-rails (3.0.0)
@@ -118,7 +127,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets.git
-  revision: 47ac6ad00408bd1636e522e8977324e5138e74a4
+  revision: f2bffbc0e057100cfb46718d32205cb9c3e95042
   branch: master
   specs:
     sprockets (4.0.0)
@@ -149,6 +158,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     bcrypt (3.1.10)
+    benchmark-ips (2.3.0)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -203,7 +213,7 @@ GEM
       eventmachine (~> 1.0)
       hiredis (~> 0.5.0)
     erubis (2.7.0)
-    eventmachine (1.0.8)
+    eventmachine (1.0.9)
     execjs (2.6.0)
     fast_blank (1.0.0)
     faye-websocket (0.10.2)
@@ -218,9 +228,9 @@ GEM
     hitimes (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    httpclient (2.7.0.1)
+    httpclient (2.7.1)
     i18n (0.7.0)
-    jquery-rails (4.0.5)
+    jquery-rails (4.1.0)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -233,6 +243,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     memcachier (0.0.2)
+    memory_profiler (0.9.6)
     method_source (0.8.2)
     mime-types (2.99)
     mimemagic (0.3.0)
@@ -273,8 +284,8 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_stdout_logging (0.0.4)
-    rake (10.4.2)
-    rb-fsevent (0.9.6)
+    rake (10.5.0)
+    rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redis (3.2.2)
@@ -284,7 +295,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.4.20)
+    sass (3.4.21)
     slop (3.6.0)
     thin (1.6.2)
       daemons (>= 1.0.9)
@@ -292,7 +303,7 @@ GEM
       rack (>= 1.0.0)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.1)
+    tilt (2.0.2)
     timers (4.1.1)
       hitimes
     tzinfo (1.2.2)
@@ -314,7 +325,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   arel!
+  benchmark-ips
   better_errors
   binding_of_caller
   byebug
@@ -330,6 +343,7 @@ DEPENDENCIES
   jquery-rails
   listen
   memcachier
+  memory_profiler
   multi_json
   paperclip
   pg

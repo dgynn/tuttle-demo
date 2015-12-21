@@ -5,6 +5,8 @@ if ENV['DYNO']
   ruby '2.3.0'
 end
 
+gem 'active_model_serializers', :github => 'dgynn/active_model_serializers', :branch => 'pr_bf4railties_initializer_order'
+
 gem 'rails', :github => 'rails/rails', :branch => 'master'
 gem 'sprockets-rails', :github => 'rails/sprockets-rails', :branch => 'master'
 gem 'sprockets', :github => 'rails/sprockets', :branch => 'master'
@@ -68,4 +70,7 @@ gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 # NewRelic goes last so it can instrument loaded libraries
 # disabled for rails5 testing
 #gem 'newrelic_rpm'
+
+gem 'benchmark-ips', require: false
+gem 'memory_profiler', require: false
 
