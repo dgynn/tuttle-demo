@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+# Use Ruby 2.3.0 on Heroku
+if ENV['DYNO']
+  ruby '2.3.0'
+end
 
 gem 'rails', :github => 'rails/rails', :branch => 'master'
 gem 'sprockets-rails', :github => 'rails/sprockets-rails', :branch => 'master'

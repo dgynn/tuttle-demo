@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: a60a285485b7338bcc49996c05b903a716528800
+  revision: d5a1d5e1128bbd4225bdface1712ab62bf9eec8b
   branch: develop
   specs:
     tuttle (0.0.4)
@@ -29,7 +29,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: f037e4ac89d538cdca65d2beecfa3710503fbe13
+  revision: c56e56773815221ef1fbd127f949c3e5207ea471
   branch: master
   specs:
     actioncable (5.0.0.beta1)
