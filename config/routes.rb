@@ -45,4 +45,7 @@ Rails.application.routes.draw do
   get '/stories', to: redirect('/articles')
   get '/stories/:name', to: redirect { |path_params, req| "/articles/#{path_params[:name].pluralize}" }
 
+  # Serve websocket cable requests in-process
+  # mount ActionCable.server => '/cable'
+
 end

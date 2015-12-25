@@ -3,6 +3,9 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 
+# Add additional assets to the asset load path
+# Rails.application.config.assets.paths << Emoji.images_path
+
 # Temporarily add all assets to precompile list. Some change with Sprockets 4
 # has this not working.
 Rails.application.config.assets.precompile += %w( favicon.ico application.js application.css )

@@ -1,5 +1,3 @@
-require 'active_support/core_ext/numeric/bytes'
-
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -11,9 +9,14 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
+  # Show full error reports.
+  config.consider_all_requests_local = true
+
+  # Enable/disable caching. By default caching is disabled.
   config.action_controller.perform_caching = true
+  config.public_file_server.headers = {
+      'Cache-Control' => 'public, max-age=172800'
+  }
 
   # To test memcache locally, set an env var for DEV_MEMCACHE and run memcached
   # You can run 'memcached -vv' to see gets/sets/connections
@@ -37,6 +40,10 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Asset digests allow you to set far-future HTTP expiration dates on all assets,
+  # yet still be able to expire them through the digest params.
+  config.assets.digest = true
+
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
@@ -44,5 +51,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Use an evented file watcher to asynchronously detect changes in source code,
+  # routes, locales, etc. This feature depends on the listen gem.
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
 end
