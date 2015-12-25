@@ -2,54 +2,60 @@
   .container
     %h1 Welcome
 
-    %p This is the Tuttle Demo application which demonstrates the capabilities of Tuttle.
-    %p This application is a Rails 4.1+ minimal application with Devise and CanCan gems installed.
+    %p
+      This is the Tuttle Demo application which demonstrates the
+      capabilities of Tuttle.
+    %p
+      This application is a Rails 5.0 minimal application with a few
+      gems (Devise, CanCan, Paperclip, etc) installed to show off
+      their inspectors.
 
     %p= link_to 'Tuttle Dashboard »', tuttle.root_path, :class=>['btn','btn-primary','btn-lg'], :role=>'button'
 
-.row
-  .col-md-4
-    .h2 Rails
-    %p
-      This basic Rails application consists of a few controllers and a few models hitting a PostgreSQL database.
-    %p
-      Tuttle can help inspect Rails applications with knowledge of configuration best practices.
-    %p= link_to 'Tuttle Rails', tuttle.rails_path, :class=>['btn','btn-primary'], :role=>'button'
+.container
+  .row
+    .col-md-6
+      .h2 Rails
+      %p
+        This basic Rails application consists of a few controllers and a few models hitting a PostgreSQL database.
+      %p
+        Tuttle can help inspect Rails applications with knowledge of configuration best practices.
+        You can use Tuttle to inspect Models, Controllers, Helpers, Engines, Generators, and more.
+      %p= link_to 'Tuttle Rails', tuttle.rails_path, :class=>['btn','btn-primary'], :role=>'button'
+    .col-md-6
+      %h2 ActiveSupport
+      %p
+        Tuttle can help inspect how ActiveSupport is configured, including Inflectors and Timezones.
+      %p
+        The inspector can also report on which dependencies have been loaded, autoloaded, and eager-loaded.
+      %p
+        = link_to 'Tuttle ActiveSupport', tuttle.active_support_path, :class=>['btn','btn-primary'], :role=>'button'
 
-    .h3 Caching
-    %p
-      Tuttle adds instrumentation to ActiveSupport's caching for better tracking of cache interactions.
-    %p
-      = link_to 'Cache Demo', cache_path, :class=>['btn','btn-primary'], :role=>'button'
-      = link_to 'Tuttle Cache Inspector', tuttle.rails_cache_path, :class=>['btn','btn-primary'], :role=>'button'
+  .row
 
-  .col-md-4
-    %h2 Gems
-    %p
-      This application includes several open source Gems which Tuttle can detect.
-    %ul
-      %li Devise authentication with self registration
-      %li CanCan authorization with simple rules
-    %p
-      = link_to 'Tuttle Devise', tuttle.devise_path, :class=>['btn','btn-primary'], :role=>'button'
-      = link_to 'Tuttle CanCan', tuttle.cancancan_path, :class=>['btn','btn-primary'], :role=>'button'
+    .col-md-6
+      .h2 Ruby
+      %p
+        Tuttle's Ruby inspector support allows you see how Ruby itself has been configured.
+        You can get details into Garbage Collection, tuning parameters, and environment variables.
+      %p
+        Tuttle will also report on which files have been loaded by Kernel.
+      %p
+        = link_to 'Tuttle Ruby', tuttle.ruby_path, :class=>['btn','btn-primary'], :role=>'button'
 
-  .col-md-4
-    #permissions.panel.panel-default
-      .panel-heading
-        %h3.panel-title Demo Permissions
-      .panel-body
-        %p You #{ can?(:update, User) ? 'can':'can not' } update a user
-        %p You #{ can?(:update, User) ? 'can':'can not' } update a user
-        %p You #{ can?(:action_a, User) ? 'can':'can not' } action_a a user
-        %p You #{ can?(:action_b, User) ? 'can':'can not' } action_b a user
-        %p You #{ can?(:action_c, User) ? 'can':'can not' } action_c a user
-        %p You #{ can?(:action_d, User) ? 'can':'can not' } action_d a user
+    .col-md-6
+      %h2 Gems
+      %p
+        This application includes several open source Gems which Tuttle can detect.
+      %ul
+        %li Devise authentication with self registration
+        %li CanCan authorization with simple rules
+        %li Paperclip file attachments
+      %p
+        = link_to 'Tuttle Devise', tuttle.devise_path, :class=>['btn','btn-primary'], :role=>'button'
+        = link_to 'Tuttle CanCan', tuttle.cancancan_path, :class=>['btn','btn-primary'], :role=>'button'
+        = link_to 'Tuttle Paperclip', tuttle.paperclip_path, :class=>['btn','btn-primary'], :role=>'button'
 
-    #helpers.panel.panel-default
-      .panel-heading
-        %h3.panel-title Helper Output
-      .panel-body
-        %p= application_helper_example
-        %p= welcome_helper_example
-
+  %hr
+  %footer
+    %p &copy; 2015 Dave Gynn
