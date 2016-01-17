@@ -1,7 +1,15 @@
 GIT
-  remote: git://github.com/dgynn/active_model_serializers.git
-  revision: 905546220d49bb5e6a759546ee13f652ebf896eb
-  branch: pr_bf4railties_initializer_order
+  remote: git://github.com/MiniProfiler/rack-mini-profiler.git
+  revision: 20ff9b296e37fb35e431d0ba8378541be8c7dadb
+  branch: master
+  specs:
+    rack-mini-profiler (0.9.8)
+      rack (>= 1.2.0)
+
+GIT
+  remote: git://github.com/bf4/active_model_serializers.git
+  revision: 6713864b64b1132e50450416c8fd3edd491cf379
+  branch: railties
   specs:
     active_model_serializers (0.10.0.rc3)
       actionpack (>= 4.0)
@@ -9,8 +17,15 @@ GIT
       railties (>= 4.0)
 
 GIT
+  remote: git://github.com/dgynn/ruby-prof.git
+  revision: dc9d426037d67658ee3e68c4caa4762c2008a9ec
+  branch: performance_tuning_experiments
+  specs:
+    ruby-prof (0.15.9)
+
+GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: ea09cc572b4f5c538a29a75db310d56d1e1c3f1b
+  revision: 07a621c0e0edba382666c76cd94fcbe20b0636fb
   branch: develop
   specs:
     tuttle (0.0.4)
@@ -24,7 +39,7 @@ GIT
 
 GIT
   remote: git://github.com/rack/rack.git
-  revision: 545532b01d332325c913808b7c2047a9256ed551
+  revision: 45acf493f153bac95fa486bc5a8633baaa9e49e4
   branch: master
   specs:
     rack (2.0.0.alpha)
@@ -39,12 +54,11 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 24ad8c058cae81874569da679df4d074694578c2
+  revision: d14db3700dc921ea5642403f81657776cc0a19fa
   branch: master
   specs:
     actioncable (5.0.0.beta1)
       actionpack (= 5.0.0.beta1)
-      celluloid (~> 0.17.2)
       coffee-rails (~> 4.1.0)
       em-hiredis (~> 0.3.0)
       faye-websocket (~> 0.10.0)
@@ -127,7 +141,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets.git
-  revision: f2bffbc0e057100cfb46718d32205cb9c3e95042
+  revision: 65504dde35b1b97017489f3a282157798723592c
   branch: master
   specs:
     sprockets (4.0.0)
@@ -140,6 +154,13 @@ GIT
   specs:
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
+
+GIT
+  remote: git://github.com/schneems/get_process_mem.git
+  revision: c7722a074866465ff242a46d7241d182a352c5f7
+  branch: master
+  specs:
+    get_process_mem (0.1.1)
 
 GIT
   remote: git://github.com/twalpole/devise.git
@@ -168,23 +189,6 @@ GEM
     builder (3.2.2)
     byebug (8.2.1)
     cancancan (1.13.1)
-    celluloid (0.17.2)
-      celluloid-essentials
-      celluloid-extras
-      celluloid-fsm
-      celluloid-pool
-      celluloid-supervision
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-pool (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-supervision (0.20.5)
-      timers (>= 4.1.1)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -213,7 +217,7 @@ GEM
       eventmachine (~> 1.0)
       hiredis (~> 0.5.0)
     erubis (2.7.0)
-    eventmachine (1.0.9)
+    eventmachine (1.0.9.1)
     execjs (2.6.0)
     fast_blank (1.0.0)
     faye-websocket (0.10.2)
@@ -225,7 +229,6 @@ GEM
     haml (4.0.7)
       tilt
     hiredis (0.5.2)
-    hitimes (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     httpclient (2.7.1)
@@ -304,8 +307,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
-    timers (4.1.1)
-      hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -338,6 +339,7 @@ DEPENDENCIES
   devise!
   eco
   fast_blank
+  get_process_mem!
   haml
   httpclient
   jquery-rails
@@ -352,10 +354,12 @@ DEPENDENCIES
   pry-rails
   quiet_assets!
   rack!
+  rack-mini-profiler!
   rails!
   rails_12factor
   rails_serve_static_assets!
   rest-client
+  ruby-prof!
   sass-rails!
   sprockets!
   sprockets-rails!
@@ -365,4 +369,4 @@ DEPENDENCIES
   yajl-ruby
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

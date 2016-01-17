@@ -5,8 +5,6 @@ if ENV['DYNO']
   ruby '2.3.0'
 end
 
-gem 'active_model_serializers', :github => 'dgynn/active_model_serializers', :branch => 'pr_bf4railties_initializer_order'
-
 gem 'rails', :github => 'rails/rails', :branch => 'master'
 gem 'sprockets-rails', :github => 'rails/sprockets-rails', :branch => 'master'
 gem 'sprockets', :github => 'rails/sprockets', :branch => 'master'
@@ -65,12 +63,24 @@ gem 'byebug', :group => [:development, :test]
 gem 'rails_12factor', :group => :production
 gem 'rails_serve_static_assets', :github => 'heroku/rails_serve_static_assets', :group => :production # pending release of 0.0.5
 
+gem 'benchmark-ips', require: false
+gem 'memory_profiler', require: false
+
+# Waiting on release with Rack 2.0 support
+gem 'rack-mini-profiler', :github => 'MiniProfiler/rack-mini-profiler', :branch => 'master'
+
+# Waiting on new release with /proc/pid/status support for linux
+gem 'get_process_mem', :github => 'schneems/get_process_mem', :branch => 'master'
+
+gem 'active_model_serializers', :github => 'bf4/active_model_serializers', :branch => 'railties'
+
+# Using experimental ruby-prof with root? optimization
+gem 'ruby-prof', :github => 'dgynn/ruby-prof', :branch => 'performance_tuning_experiments', require: false
+
+# Tuttle should go nearly last
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 
 # NewRelic goes last so it can instrument loaded libraries
-# disabled for rails5 testing
+# Disabled for rails5 testing
 #gem 'newrelic_rpm'
-
-gem 'benchmark-ips', require: false
-gem 'memory_profiler', require: false
 
