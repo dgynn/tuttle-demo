@@ -72,7 +72,7 @@ gem 'rack-mini-profiler', :github => 'MiniProfiler/rack-mini-profiler', :branch 
 # Waiting on new release with /proc/pid/status support for linux
 gem 'get_process_mem', :github => 'schneems/get_process_mem', :branch => 'master'
 
-gem 'active_model_serializers', :github => 'bf4/active_model_serializers', :branch => 'railties'
+gem 'active_model_serializers', :github => 'rails-api/active_model_serializers', :branch => 'master'
 
 # Using experimental ruby-prof with root? optimization
 gem 'ruby-prof', :github => 'dgynn/ruby-prof', :branch => 'performance_tuning_experiments', require: false
