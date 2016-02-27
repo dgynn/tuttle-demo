@@ -6,11 +6,7 @@ if ENV['DYNO']
 end
 
 gem 'rails', :github => 'rails/rails', :branch => 'master'
-gem 'sprockets-rails', :github => 'rails/sprockets-rails', :branch => 'master'
-gem 'sprockets', :github => 'rails/sprockets', :branch => 'master'
-gem 'sass-rails', :github => 'rails/sass-rails', :branch => 'master'
-gem 'arel', :github => 'rails/arel', :branch => 'master'
-gem 'rack', :github => 'rack/rack', :branch => 'master'
+gem 'sass-rails', '>= 6.0.0.beta1'
 
 gem 'pg'
 
@@ -28,7 +24,7 @@ gem 'haml'
 
 # Utility libraries
 gem 'cancancan'
-gem 'devise', :github => 'twalpole/devise', :branch => 'rails5'
+gem 'devise', '>= 4.0.0.rc1'
 gem 'paperclip'
 
 # Caching
@@ -61,7 +57,7 @@ end
 gem 'byebug', :group => [:development, :test]
 
 gem 'rails_12factor', :group => :production
-gem 'rails_serve_static_assets', :github => 'heroku/rails_serve_static_assets', :group => :production # pending release of 0.0.5
+gem 'rails_serve_static_assets'
 
 gem 'benchmark-ips', require: false
 gem 'memory_profiler', require: false
