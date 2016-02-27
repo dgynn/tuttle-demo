@@ -19,7 +19,9 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/active_record'
+  ActiveSupport.on_load(:active_record) do
+    require 'devise/orm/active_record'
+  end
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -94,7 +96,7 @@ Devise.setup do |config|
   # a value less than 10 in other environments. Note that, for bcrypt (the default
   # encryptor), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
-  config.stretches = Rails.env.test? ? 1 : 10
+  config.stretches = Rails.env.test? ? 1 : 11
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = '12a406edda96ea545879a7995f21abc583325084cf4a34262a2ce8f10a4980905239cc9f5d61e538df2bfc36724ec8d88cebc0278e14337a5995fe6b28ddb236'
