@@ -70,8 +70,7 @@ gem 'get_process_mem', :github => 'schneems/get_process_mem', :branch => 'master
 
 gem 'active_model_serializers', :github => 'rails-api/active_model_serializers', :branch => 'master'
 
-# Using experimental ruby-prof with root? optimization
-gem 'ruby-prof', :github => 'dgynn/ruby-prof', :branch => 'performance_tuning_experiments', require: false
+gem 'ruby-prof'
 
 # Tuttle should go nearly last
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
