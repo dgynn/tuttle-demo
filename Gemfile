@@ -5,7 +5,8 @@ if ENV['DYNO']
   ruby '2.3.0'
 end
 
-gem 'rails', :github => 'rails/rails', :branch => 'master'
+#gem 'rails', :github => 'rails/rails', :branch => 'master'
+gem 'rails', '>= 5.0.0.rc1'
 gem 'sass-rails', '>= 6.0.0.beta1'
 
 gem 'pg'
