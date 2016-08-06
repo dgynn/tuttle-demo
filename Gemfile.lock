@@ -1,6 +1,14 @@
 GIT
+  remote: git://github.com/MiniProfiler/rack-mini-profiler.git
+  revision: faece4848dc04bd9aaa028becb4d561d0063666c
+  branch: master
+  specs:
+    rack-mini-profiler (0.10.1)
+      rack (>= 1.2.0)
+
+GIT
   remote: git://github.com/dgynn/tuttle.git
-  revision: 2eb1bc6705594f3797c89e2e7ae57ea03488912b
+  revision: 09f50ceb5beb39b6c05cab2dd6412d5aa618033c
   branch: develop
   specs:
     tuttle (0.0.5)
@@ -97,7 +105,9 @@ GEM
     eventmachine (1.2.0.1)
     execjs (2.7.0)
     fast_blank (1.0.0)
+    fast_stack (0.2.0)
     ffi (1.9.10)
+    flamegraph (0.9.5)
     get_process_mem (0.2.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -156,8 +166,6 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     rack (2.0.1)
-    rack-mini-profiler (0.10.1)
-      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0)
@@ -215,6 +223,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stackprof (0.2.9)
     thin (1.7.0)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -251,6 +260,8 @@ DEPENDENCIES
   devise
   eco
   fast_blank
+  fast_stack
+  flamegraph
   get_process_mem
   haml
   httpclient
@@ -263,17 +274,18 @@ DEPENDENCIES
   pg
   pry-byebug
   pry-rails
-  rack-mini-profiler
+  rack-mini-profiler!
   rails
   rails_12factor
   rails_serve_static_assets
   rest-client
   ruby-prof
   sass-rails
+  stackprof
   thin
   tuttle!
   uglifier
   yajl-ruby
 
 BUNDLED WITH
-   1.12.5
+   1.11.2

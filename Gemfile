@@ -44,6 +44,8 @@ gem 'multi_json'
 
 # Performance
 gem 'fast_blank'
+gem 'stackprof'
+gem 'fast_stack'
 
 group :development do
   gem 'better_errors'
@@ -61,7 +63,8 @@ gem 'benchmark-ips', require: false
 gem 'memory_profiler', require: false
 gem 'ruby-prof'
 gem 'get_process_mem'
-gem 'rack-mini-profiler'
+gem 'rack-mini-profiler', :github => 'MiniProfiler/rack-mini-profiler', :branch => 'master'
+gem 'flamegraph'
 
 # Tuttle should go nearly last
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
