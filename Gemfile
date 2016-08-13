@@ -65,6 +65,7 @@ gem 'ruby-prof'
 gem 'get_process_mem'
 gem 'rack-mini-profiler', :github => 'MiniProfiler/rack-mini-profiler', :branch => 'master'
 gem 'flamegraph'
+gem 'skylight', '>= 1.0.0.beta5'
 
 # Tuttle should go nearly last
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
