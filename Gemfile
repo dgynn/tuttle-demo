@@ -22,11 +22,12 @@ gem 'eco'
 # gem 'ejs'
 gem 'haml'
 
-# Utility libraries
+# Utility/optional libraries
 gem 'active_model_serializers'
 gem 'cancancan'
 gem 'devise'
 gem 'paperclip'
+gem 'facter'
 
 # Caching
 gem 'dalli'
@@ -48,8 +49,8 @@ gem 'stackprof'
 gem 'fast_stack'
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  gem 'better_errors', :require => false
+  gem 'binding_of_caller', :require => false
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen'
@@ -60,8 +61,9 @@ gem 'rails_serve_static_assets'
 
 # Profiling
 gem 'benchmark-ips', require: false
-gem 'memory_profiler', require: false
+gem 'memory_profiler', :github => 'dgynn/memory_profiler', :branch => 'master'
 gem 'ruby-prof'
+gem 'busted'
 gem 'get_process_mem'
 gem 'rack-mini-profiler', :github => 'MiniProfiler/rack-mini-profiler', :branch => 'master'
 gem 'flamegraph'
@@ -73,4 +75,3 @@ gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
 # NewRelic goes last so it can instrument loaded libraries
 # Disabled for rails5 testing
 #gem 'newrelic_rpm'
-

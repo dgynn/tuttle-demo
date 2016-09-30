@@ -26,6 +26,11 @@ Rails.application.configure do
     config.cache_store = :memory_store, { size: 64.megabytes }
   end
 
+  unless ENV['DEV_PROFILING'] == 'true'
+    require 'better_errors'
+    require 'binding_of_caller'
+  end
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
