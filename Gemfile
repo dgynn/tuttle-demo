@@ -61,13 +61,13 @@ gem 'rails_serve_static_assets'
 
 # Profiling
 gem 'benchmark-ips', require: false
-gem 'memory_profiler', :github => 'dgynn/memory_profiler', :branch => 'master'
+gem 'memory_profiler'
 gem 'ruby-prof'
 gem 'busted'
 gem 'get_process_mem'
 gem 'rack-mini-profiler', :github => 'MiniProfiler/rack-mini-profiler', :branch => 'master'
 gem 'flamegraph'
-gem 'skylight', '>= 1.0.0.beta5'
+gem 'skylight'
 
 # Tuttle should go nearly last
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
