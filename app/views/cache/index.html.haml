@@ -1,40 +1,41 @@
-.row
-  .col-md-8
-    %h2 Rails Caching Demo
-    %p
-      This page will generate cache interactions that will appear in the
-      = link_to 'Tuttle Cache Inspector', tuttle.rails_cache_path, :class=>['btn','btn-primary'], :role=>'button'
+.container
+  .row{style: 'margin-top: 70px;'}
+    .col-md-8
+      %h2 Rails Caching Demo
+      %p
+        This page will generate cache interactions that will appear in the
+        = link_to 'Tuttle Cache Inspector', tuttle.rails_cache_path, :class=>['btn','btn-primary'], :role=>'button'
 
-  .col-md-4
-    #caching.panel.panel-default
-      .panel-heading
-        %h3.panel-title Cached Output Examples
-      .panel-body
-        %p Current time #{Time.now}
-        - cache_if(!!params[:test], params[:test]) do
-          %p Test with test_if(#{!!params[:test]}, #{params[:test]})
-        - cache('cache_test') do
-          %p Test
-        - cache(['cache_test','array']) do
-          %p Test with array of keys
-        - cache_if(!!params[:test], params[:test]) do
-          %p Test with test_if(#{!!params[:test]}, #{params[:test]})
-        - cache('cache_test_without_digest', skip_digest: true) do
-          %p Test without digest
-        - cache(['cache_test','array']) do
-          %p Test with array of keys
-        - if true # disabled waiting for rails 5 patch
-          %p= Rails.cache.fetch('cache_test_with_expires', {:expires_in => 1.minute}) { "Test with 1 minute expiration at #{Time.now}" }
-          %p= Rails.cache.fetch('cache_test_with_force', {:force => true}) { "Test with :force => true" }
-          %p= Rails.cache.fetch('cache_test_with_compress', {:compress => true}) { "Test with :compress => true" }
-          %p= Rails.cache.fetch('cache_test_with_raw', {:raw => true}) { "Test with :raw => true" }
-        - else # restore these helper calls when patch is accepted
-          - cache('cache_test_with_expires', {:expires_in => 1.minute}) do
-            %p Test with 1 minute expiration at #{Time.now}
-          - cache('cache_test_with_force', force: true) do
-            %p Test with :force => true
-          - cache('cache_test_with_compress', compress: true) do
-            %p Test with :compress => true
-          - cache('cache_test_with_raw', raw: true) do
-            %p Test with :raw => true
-        - # no example of :race_condition_ttl option
+    .col-md-4
+      #caching.panel.panel-default
+        .panel-heading
+          %h3.panel-title Cached Output Examples
+        .panel-body
+          %p Current time #{Time.now}
+          - cache_if(!!params[:test], params[:test]) do
+            %p Test with test_if(#{!!params[:test]}, #{params[:test]})
+          - cache('cache_test') do
+            %p Test
+          - cache(['cache_test','array']) do
+            %p Test with array of keys
+          - cache_if(!!params[:test], params[:test]) do
+            %p Test with test_if(#{!!params[:test]}, #{params[:test]})
+          - cache('cache_test_without_digest', skip_digest: true) do
+            %p Test without digest
+          - cache(['cache_test','array']) do
+            %p Test with array of keys
+          - if true # disabled waiting for rails 5 patch
+            %p= Rails.cache.fetch('cache_test_with_expires', {:expires_in => 1.minute}) { "Test with 1 minute expiration at #{Time.now}" }
+            %p= Rails.cache.fetch('cache_test_with_force', {:force => true}) { "Test with :force => true" }
+            %p= Rails.cache.fetch('cache_test_with_compress', {:compress => true}) { "Test with :compress => true" }
+            %p= Rails.cache.fetch('cache_test_with_raw', {:raw => true}) { "Test with :raw => true" }
+          - else # restore these helper calls when patch is accepted
+            - cache('cache_test_with_expires', {:expires_in => 1.minute}) do
+              %p Test with 1 minute expiration at #{Time.now}
+            - cache('cache_test_with_force', force: true) do
+              %p Test with :force => true
+            - cache('cache_test_with_compress', compress: true) do
+              %p Test with :compress => true
+            - cache('cache_test_with_raw', raw: true) do
+              %p Test with :raw => true
+          - # no example of :race_condition_ttl option

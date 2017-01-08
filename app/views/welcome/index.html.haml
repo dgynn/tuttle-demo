@@ -23,17 +23,6 @@
         You can use Tuttle to inspect Models, Controllers, Helpers, Engines, Generators, and more.
       %p= link_to 'Tuttle Rails', tuttle.rails_path, :class=>['btn','btn-primary'], :role=>'button'
     .col-md-6
-      %h2 ActiveSupport
-      %p
-        Tuttle can help inspect how ActiveSupport is configured, including Inflectors and Timezones.
-      %p
-        The inspector can also report on which dependencies have been loaded, autoloaded, and eager-loaded.
-      %p
-        = link_to 'Tuttle ActiveSupport', tuttle.active_support_path, :class=>['btn','btn-primary'], :role=>'button'
-
-  .row
-
-    .col-md-6
       .h2 Ruby
       %p
         Tuttle's Ruby inspector support allows you see how Ruby itself has been configured.
@@ -42,6 +31,17 @@
         Tuttle will also report on which files have been loaded by Kernel.
       %p
         = link_to 'Tuttle Ruby', tuttle.ruby_path, :class=>['btn','btn-primary'], :role=>'button'
+
+  .row
+
+    .col-md-6
+      %h2 ActiveSupport
+      %p
+        Tuttle can help inspect how ActiveSupport is configured, including Inflectors and Timezones.
+      %p
+        The inspector can also report on which dependencies have been loaded, autoloaded, and eager-loaded.
+      %p
+        = link_to 'Tuttle ActiveSupport', tuttle.active_support_path, :class=>['btn','btn-primary'], :role=>'button'
 
     .col-md-6
       %h2 Gems
@@ -56,6 +56,30 @@
         = link_to 'Tuttle CanCan', tuttle.cancancan_path, :class=>['btn','btn-primary'], :role=>'button'
         = link_to 'Tuttle Paperclip', tuttle.paperclip_path, :class=>['btn','btn-primary'], :role=>'button'
 
+  .row
+
+    .col-md-6
+      .h2 Caching
+      %p
+        Tuttle's Ruby inspector provides insights into the Cache configuration of
+        your application.
+      %p
+        = link_to 'Tuttle Cache', tuttle.rails_cache_path, :class=>['btn','btn-primary'], :role=>'button'
+        = link_to 'Tuttle Demo Cache Exerciser', cache_path, :class=>['btn','btn-info'], :role=>'button'
+
+    .col-md-6
+      %h2 Profiling
+      %p
+        Tuttle includes an on-demand request profiling middleware to allow you to
+        inspect memory or CPU usage of a request.
+      %p
+        Just add <code>?tuttle-profiler=memory</code> or
+        <code>?tuttle-profiler=cpu</code> to any URL to invoke the profiler.
+
+      %p
+        = link_to 'Memory Profiler', tuttle.root_path('tuttle-profiler':'memory'), :class=>['btn','btn-primary'], :role=>'button'
+        = link_to 'CPU Profiler', tuttle.root_path('tuttle-profiler':'cpu'), :class=>['btn','btn-primary'], :role=>'button'
+
   %hr
   %footer
-    %p &copy; 2015 Dave Gynn
+    %p &copy; 2017 Dave Gynn
