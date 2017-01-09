@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-# Use Ruby 2.3.1 on Heroku - https://devcenter.heroku.com/articles/ruby-support#default-ruby-version-for-new-apps
+# Use specified ruby version on Heroku - https://devcenter.heroku.com/articles/ruby-support#default-ruby-version-for-new-apps
 if ENV['DYNO']
-  ruby '2.3.1'
+  ruby '2.3.3'
 end
 
 gem 'rails'
