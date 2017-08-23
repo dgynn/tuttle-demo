@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/MiniProfiler/rack-mini-profiler.git
+  remote: https://github.com/MiniProfiler/rack-mini-profiler.git
   revision: 9cd39a2dc13a758dc2fbef7120bed6ad11ee6a0b
   branch: master
   specs:
@@ -7,7 +7,7 @@ GIT
       rack (>= 1.2.0)
 
 GIT
-  remote: git://github.com/dgynn/tuttle.git
+  remote: https://github.com/dgynn/tuttle.git
   revision: 5430a2dc2a5c6777c67ff4bfa6a11a9f8ffdc147
   branch: develop
   specs:
