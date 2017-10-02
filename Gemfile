@@ -73,6 +73,7 @@ gem 'get_process_mem'
 gem 'rack-mini-profiler', :github => 'MiniProfiler/rack-mini-profiler', :branch => 'master'
 gem 'flamegraph'
 gem 'skylight'
+gem 'translation'
 
 # Tuttle should go nearly last
 gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
