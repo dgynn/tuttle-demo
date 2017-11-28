@@ -1,3 +1,11 @@
 ---
 en:
   hello: Hello world
+  date:
+    formats:
+      custom_date1: "%d/%m/%Y"
+      custom_date2: "%d de %B de %Y"
+  time:
+    formats:
+      custom_time1: "%d/%m/%Y"
+      custom_time2: "%d de %B de %Y"

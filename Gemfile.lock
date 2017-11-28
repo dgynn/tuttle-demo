@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/dgynn/tuttle.git
-  revision: 3e6b41aa31b61ba199cc0547906911d9573efe35
+  revision: 57a250c718cfa539df87a2d4a1eb19d0e5725c4d
   branch: develop
   specs:
     tuttle (0.0.7)
