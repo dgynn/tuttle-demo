@@ -13,7 +13,7 @@ end
 gem 'rails'
 gem 'sass-rails'
 
-gem 'pg'
+gem 'pg', "~> 0.18"
 
 gem 'uglifier'
 gem 'coffee-rails'
