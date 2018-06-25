@@ -29,8 +29,8 @@ Rails.application.routes.draw do
   end
 
   # Dynamic non-RESTful
-  get ':controller(/:action(/:id))', controller: /admin\/[^\/]+/
-  get ':controller/:action/:id/with_user/:user_id'
+  # get ':controller(/:action(/:id))', controller: /admin\/[^\/]+/
+  # get ':controller/:action/:id/with_user/:user_id'
 
   # With defaults
   get 'photos/:id', to: 'photos#show', defaults: { format: 'jpg' }
