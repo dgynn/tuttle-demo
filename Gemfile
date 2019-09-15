@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Use specified ruby version on Heroku - https://devcenter.heroku.com/articles/ruby-support#default-ruby-version-for-new-apps
 if ENV['DYNO']
-  ruby '2.6.2'
+  ruby '2.6.4'
 end
 
 git_source(:github) do |repo_name|
@@ -10,7 +10,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails'
+gem 'rails', "5.2.3"
 gem 'sass-rails'
 
 gem 'pg', "~> 0.18"
