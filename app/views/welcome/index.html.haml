@@ -7,7 +7,7 @@
       capabilities of Tuttle.
     %p
       This application is a Rails 5.x minimal application with a few
-      gems (Devise, CanCan, Paperclip, etc) installed to show off
+      gems (Devise, CanCan, etc) installed to show off
       their inspectors.
 
     %p= link_to 'Tuttle Dashboard »', tuttle.root_path, :class=>['btn','btn-primary','btn-lg'], :role=>'button'
@@ -50,11 +50,9 @@
       %ul
         %li Devise authentication with self registration
         %li CanCan authorization with simple rules
-        %li Paperclip file attachments
       %p
         = link_to 'Tuttle Devise', tuttle.devise_path, :class=>['btn','btn-primary'], :role=>'button'
         = link_to 'Tuttle CanCan', tuttle.cancancan_path, :class=>['btn','btn-primary'], :role=>'button'
-        = link_to 'Tuttle Paperclip', tuttle.paperclip_path, :class=>['btn','btn-primary'], :role=>'button'
 
   .row
 

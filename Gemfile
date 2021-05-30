@@ -2,15 +2,10 @@ source 'https://rubygems.org'
 
 # Use specified ruby version on Heroku - https://devcenter.heroku.com/articles/ruby-support#default-ruby-version-for-new-apps
 if ENV['DYNO']
-  ruby '2.6.5'
+  ruby '3.0.1'
 end
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
-gem 'rails', "5.2.3"
+gem 'rails', "~> 6.0.3.7"
 gem 'sass-rails'
 
 gem 'pg', "~> 0.18"
@@ -31,7 +26,7 @@ gem 'haml'
 gem 'active_model_serializers'
 gem 'cancancan'
 gem 'devise'
-gem 'paperclip'
+# gem 'paperclip'
 gem 'facter'
 
 # Caching
@@ -76,7 +71,7 @@ gem 'skylight'
 gem 'translation'
 
 # Tuttle should go nearly last
-gem 'tuttle', :github => 'dgynn/tuttle', :branch => 'develop'
+gem 'tuttle', github: 'dgynn/tuttle', branch: 'develop'
 
 # NewRelic goes last so it can instrument loaded libraries
 # Disabled for rails5 testing
